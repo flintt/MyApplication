@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
-    //定义
+    //定义一个新的消息
     public static final String EXTRA_MESSAGE = "com.example.myapplication.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editText);
+        EditText editText =  findViewById(R.id.editText);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
